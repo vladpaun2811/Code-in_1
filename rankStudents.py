@@ -45,9 +45,10 @@ def rewardStudents(sortedStudentRecord, reward):
     print("{} has received a cash reward of ${}".format(sortedStudentRecord[2][0], reward[2]))
     print()
 
-def lottery(sortedStudentRecord, reward):
+def lottery(sortedStudentRecord):
     print("In Lottery")
-    print("{} is receiving a prize ".format(sortedStudentRecord[2][0], reward[2]))
+    random.choice(sortedStudentRecord)
+    print("{} is receiving a prize".format(random.choice(sortedStudentRecord)))
     print()
 
 
@@ -65,5 +66,5 @@ studentRecord = readStudentDetails()
 sortedStudentRecord = rankStudents(studentRecord)
 reward = (500, 300, 100,)
 rewardStudents(sortedStudentRecord, reward)
-lottery(sortedStudentRecord, reward)
+lottery(sortedStudentRecord)
 appreciateStudents(sortedStudentRecord)
